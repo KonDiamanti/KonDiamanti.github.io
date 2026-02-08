@@ -558,11 +558,14 @@ img { max-width: 100%; display: block; }
 .timeline-item {
     background: var(--surface);
     border-radius: var(--radius);
-    padding: 24px 28px;
+    padding: 10px 28px;
     border: 1.5px solid var(--surface-border);
     transition: all var(--transition);
     box-shadow: var(--shadow);
     position: relative;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
 }
 
 .timeline-item::before {
