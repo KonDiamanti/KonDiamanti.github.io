@@ -1,5 +1,4 @@
 :root {
-    /* Calm cream base — color lives in the accents, not the backgrounds */
     --bg: #FAF7F2;
     --bg-alt: #F2EDE6;
     --bg-deep: #1E1E2E;
@@ -38,7 +37,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Dot grid background pattern */
 body::before {
     content: '';
     position: fixed;
@@ -50,7 +48,6 @@ body::before {
     background-size: 32px 32px;
 }
 
-/* Subtle grain texture */
 body::after {
     content: '';
     position: fixed;
@@ -69,7 +66,7 @@ ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
 /* ===========================
-   Floating Decorative Blobs
+   Floating Shapes
    =========================== */
 .floating-shapes {
     position: fixed;
@@ -270,7 +267,6 @@ img { max-width: 100%; display: block; }
     z-index: 1;
 }
 
-/* Subtle geometric rings */
 .hero::before {
     content: '';
     position: absolute;
@@ -445,7 +441,7 @@ img { max-width: 100%; display: block; }
 .btn:hover .btn-icon { transform: translateX(3px); }
 
 /* ===========================
-   About Section — open, flowing text (no card box)
+   About
    =========================== */
 .about {
     padding: 100px 0;
@@ -475,7 +471,6 @@ img { max-width: 100%; display: block; }
     position: relative;
 }
 
-/* Subtle highlight behind strong text */
 .about-card strong::after {
     content: '';
     position: absolute;
@@ -493,7 +488,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* ===========================
-   Timeline (Experience & Education)
+   Experience & Education
    =========================== */
 .timeline {
     padding: 100px 0;
@@ -614,7 +609,7 @@ img { max-width: 100%; display: block; }
 .timeline-item .item-description em { color: var(--coral); }
 
 /* ===========================
-   Projects Section
+   Projects
    =========================== */
 .projects {
     padding: 100px 0;
@@ -773,7 +768,6 @@ img { max-width: 100%; display: block; }
     transform: translateY(-1px);
 }
 
-/* Phone Mockup */
 .phone-mockup {
     width: 220px;
     height: 450px;
@@ -838,7 +832,6 @@ img { max-width: 100%; display: block; }
     height: 32px;
 }
 
-/* Project Links */
 .project-links { margin-top: 8px; }
 
 .project-link {
@@ -873,7 +866,7 @@ img { max-width: 100%; display: block; }
 .project-link:hover svg { stroke: #fff; }
 
 /* ===========================
-   Beyond Code Section
+   Hobbies
    =========================== */
 .beyond-code {
     padding: 100px 0;
@@ -937,7 +930,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* ===========================
-   Contact Section — dark contrast
+   Contact
    =========================== */
 .contact {
     padding: 100px 0;
