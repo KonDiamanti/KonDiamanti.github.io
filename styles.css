@@ -916,6 +916,35 @@ img { max-width: 100%; display: block; }
     transform: scale(1.3);
 }
 
+.carousel-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-top: 10px;
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    opacity: 0.6;
+    animation: hintBounce 2s ease-in-out infinite;
+}
+
+.carousel-hint svg {
+    stroke: var(--coral);
+    transform: rotate(180deg);
+}
+
+.app-carousel:hover .carousel-hint {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes hintBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
 .project-links {
     display: flex;
     gap: 8px;
