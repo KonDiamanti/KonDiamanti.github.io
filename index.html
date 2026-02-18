@@ -121,19 +121,26 @@
             <!-- Featured Project -->
             <article class="project-row reveal">
                 <div class="project-visual">
-                    <div class="phone-mockup">
-                        <div class="phone-screen">
-                            <div class="placeholder-screen">
-                                <span class="placeholder-icon"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg></span>
-                                <span>Coming Soon</span>
+                    <div class="app-carousel" id="appCarousel">
+                        <div class="phone-mockup">
+                            <div class="phone-screen">
+                                <img src="celio_mockup/1_nobg.png" alt="Welcome to Celio" class="carousel-img active">
+                                <img src="celio_mockup/2_nobg.png" alt="Scan Any Product" class="carousel-img">
+                                <img src="celio_mockup/3_welcome.png" alt="Eat With Confidence" class="carousel-img">
+                                <img src="celio_mockup/4_welcome_nob.png" alt="Home Screen" class="carousel-img">
+                                <img src="celio_mockup/12_ingredient-safescan.png" alt="Scanning Ingredients" class="carousel-img">
+                                <img src="celio_mockup/13_safe_nobg.png" alt="Safe to Eat Result" class="carousel-img">
+                                <img src="celio_mockup/15_historyafter.png" alt="Scan History" class="carousel-img">
                             </div>
                         </div>
+                        <div class="carousel-dots" id="carouselDots"></div>
                     </div>
                 </div>
                 <div class="project-info">
                     <div class="project-badge">Featured Project</div>
                     <h3 class="project-title">CeliacScanner</h3>
                     <p class="project-subtitle">iOS App for Gluten-Free Living</p>
+                    <span class="app-store-badge">Coming soon in App Store</span>
                     <p class="project-description">
                         A personal project born from a real need, as someone with celiac disease who loves
                         to travel, I often struggle to read ingredient labels in foreign languages.
@@ -374,6 +381,32 @@
                     link.classList.add('active');
                 }
             });
+        });
+
+        // App screenshot carousel
+        const carousel = document.getElementById('appCarousel');
+        const imgs = carousel.querySelectorAll('.carousel-img');
+        const dotsContainer = document.getElementById('carouselDots');
+        let currentSlide = 0;
+
+        imgs.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'Screenshot ' + (i + 1));
+            dot.addEventListener('click', (e) => { e.stopPropagation(); goToSlide(i); });
+            dotsContainer.appendChild(dot);
+        });
+
+        function goToSlide(index) {
+            imgs[currentSlide].classList.remove('active');
+            dotsContainer.children[currentSlide].classList.remove('active');
+            currentSlide = index;
+            imgs[currentSlide].classList.add('active');
+            dotsContainer.children[currentSlide].classList.add('active');
+        }
+
+        carousel.addEventListener('click', () => {
+            goToSlide((currentSlide + 1) % imgs.length);
         });
 
     </script>
