@@ -1201,6 +1201,56 @@ img { max-width: 100%; display: block; }
 }
 
 /* ===========================
+   Clay 3D Models
+   =========================== */
+.clay-models {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.clay-models-label {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.clay-models-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.clay-model-card {
+    background: linear-gradient(135deg, rgba(107, 91, 149, 0.06), rgba(255, 111, 97, 0.04));
+    border-radius: var(--radius);
+    border: 1.5px solid rgba(107, 91, 149, 0.1);
+    box-shadow: var(--shadow);
+    padding: 12px 12px 10px;
+    transition: all var(--transition);
+}
+
+.clay-model-card model-viewer {
+    background-color: transparent;
+}
+
+.clay-model-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(107, 91, 149, 0.22);
+}
+
+.clay-model-name {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+/* ===========================
    Contact
    =========================== */
 .contact {

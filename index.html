@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konstantina Christina Diamanti | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -16,7 +17,7 @@
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
-                <a href="KDiamantiResume.pdf" class="nav-resume" target="_blank">Resume</a>
+                <a href="resume/KDiamantiResume.pdf" class="nav-resume" target="_blank">Resume</a>
             </div>
         </div>
     </nav>
@@ -273,6 +274,25 @@
                 <div class="hobby-card">
                     <span class="hobby-icon"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg></span>
                     <span class="hobby-label">Concerts</span>
+                </div>
+            </div>
+
+            <!-- 3D Clay Models -->
+            <div class="clay-models reveal">
+                <p class="clay-models-label">My clay sculptures — drag to rotate ✦</p>
+                <div class="clay-models-grid">
+                    <div class="clay-model-card">
+                        <model-viewer src="models/Cats.glb" alt="Clay cats sculpture" auto-rotate camera-controls shadow-intensity="5" min-camera-orbit="auto 30deg auto" max-camera-orbit="auto 90deg auto" style="width:100%;height:220px;border-radius:12px;--poster-color:transparent;background-color:transparent;"></model-viewer>
+                        <span class="clay-model-name">Cats</span>
+                    </div>
+                    <div class="clay-model-card">
+                        <model-viewer src="models/Fish.glb" alt="Clay fish sculpture" auto-rotate camera-controls shadow-intensity="5" min-camera-orbit="auto 30deg auto" max-camera-orbit="auto 90deg auto" style="width:100%;height:220px;border-radius:12px;--poster-color:transparent;background-color:transparent;"></model-viewer>
+                        <span class="clay-model-name">Fish</span>
+                    </div>
+                    <div class="clay-model-card">
+                        <model-viewer src="models/Frogs.glb" alt="Clay frogs sculpture" auto-rotate camera-controls shadow-intensity="5" min-camera-orbit="auto 30deg auto" max-camera-orbit="auto 90deg auto" style="width:100%;height:220px;border-radius:12px;--poster-color:transparent;background-color:transparent;"></model-viewer>
+                        <span class="clay-model-name">Frogs</span>
+                    </div>
                 </div>
             </div>
         </div>
